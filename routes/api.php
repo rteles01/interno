@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+Use App\Cliente;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+
+
+Route::get('clientes', 'ClienteController@index');
+Route::get('clientes/{id}', 'ClienteController@show');
+Route::post('clientes', 'ClienteController@store');
+Route::put('clientes/{id}', 'ClienteController@update');
+Route::delete('clientes/{id}', 'ClienteController@delete');

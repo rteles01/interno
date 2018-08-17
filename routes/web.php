@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cadastrar', function () {
+    return view('clientes.cadastrar');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
